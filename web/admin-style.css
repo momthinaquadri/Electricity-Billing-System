@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+display:flex;
+background:linear-gradient(135deg,#1f4037,#99f2c8);
+min-height:100vh;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar{
+width:250px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(20px);
+color:white;
+padding:30px 20px;
+display:flex;
+flex-direction:column;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:40px;
+font-size:22px;
+}
+
+.sidebar a{
+color:white;
+text-decoration:none;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
+transition:0.4s;
+font-size:15px;
+}
+
+.sidebar a:hover{
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+transform:translateX(5px);
+}
+
+/* ================= Main ================= */
+
+.main{
+flex:1;
+padding:40px;
+color:white;
+overflow:auto;
+}
+
+/* ================= Cards ================= */
+
+.cards{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+height:230px; /* Fixed Equal Height */
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(20px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+}
+
+.card i{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.card h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:15px;
+opacity:0.9;
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+.sidebar{
+width:200px;
+}
+.main{
+padding:20px;
+}
+}

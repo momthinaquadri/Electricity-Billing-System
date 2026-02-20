@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Electricity Billing System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    /* Premium Gradient Background */
+    background: linear-gradient(135deg,#1e3c72,#2a5298);
+}
+
+/* Glass Effect Card */
+
+.card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    width:500px;
+    padding:60px 40px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+    text-align:center;
+    color:white;
+    display:none;
+    animation:fadeIn 1s ease-in-out;
+}
+
+h1{
+    margin-bottom:50px;
+    font-weight:700;
+    font-size:34px;
+}
+
+/* Buttons */
+
+.btn{
+    display:block;
+    padding:18px;
+    margin:20px auto;
+    width:85%;
+    border-radius:15px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+    transition:0.3s;
+}
+
+/* Admin Button */
+.admin{
+    background: linear-gradient(45deg,#ff416c,#ff4b2b);
+    color:white;
+}
+
+.admin:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Customer Button */
+.customer{
+    background: linear-gradient(45deg,#00c6ff,#0072ff);
+    color:white;
+}
+
+.customer:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.footer{
+    margin-top:40px;
+    font-size:14px;
+    opacity:0.8;
+}
+
+/* Loader */
+
+#loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:9999;
+    color:white;
+}
+
+.bolt{
+    font-size:60px;
+    animation:flash 0.8s infinite alternate;
+}
+
+.loading-text{
+    margin-top:20px;
+    font-size:20px;
+    letter-spacing:4px;
+    font-weight:600;
+}
+
+@keyframes flash{
+    from{opacity:0.3;}
+    to{opacity:1;}
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="bolt"><i class="fas fa-bolt"></i></div>
+    <div class="loading-text">Powering System...</div>
+</div>
+
+<!-- Main Card -->
+<div class="card" id="mainContent">
+    <h1><i class="fas fa-lightbulb"></i> Electricity Billing System</h1>
+    
+    <a href="adminLogin.jsp" class="btn admin">
+        <i class="fas fa-user-shield"></i> Admin Panel
+    </a>
+    
+    <a href="customerDashboard.jsp" class="btn customer">
+
+        <i class="fas fa-users"></i> Customer Panel
+    </a>
+ 
+    <div class="footer">
+        2026 Electricity Management System
+    </div>
+</div>
+
+<script>
+setTimeout(function(){
+    document.getElementById("loader").style.display="none";
+    document.getElementById("mainContent").style.display="block";
+},2000);
+</script>
+
+</body>
+</html>
