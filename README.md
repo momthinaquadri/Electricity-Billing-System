@@ -1,5 +1,5 @@
 
-A web-based Electricity Billing System developed using HTML, CSS, JSP, Servlets, and MySQL. The system manages electricity billing operations with separate Admin and Customer panels.
+A web-based Electricity Billing System developed using HTML, CSS, JSP and MySQL. The system manages electricity billing operations with separate Admin and Customer panels.
 
 🚀 Features
 
